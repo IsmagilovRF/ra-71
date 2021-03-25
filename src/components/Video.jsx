@@ -1,18 +1,13 @@
 import React from "react";
+import DateTimePretty from "./DateTimePretty";
 
-function Video(props) {
+const Video = (props) => {
   return (
-    <div className="item item-video">
-      <iframe
-        title="Video"
-        src={props.url}
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      ></iframe>
-      <p className="views">Просмотров: {props.views}</p>
+    <div className="video">
+      <iframe title="Video" src={props.url} allowFullScreen />
+      <DateTimePretty date={props.date} />
     </div>
   );
-}
+};
 
 export default Video;
